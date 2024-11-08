@@ -14,20 +14,20 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm border-b border-white/10 md:h-[10vh] lg:h-[10vh]">
-      <div className="p-4">
-        <div className="flex h-16 items-center justify-between">
+    <nav className="top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm border-b border-white/10">
+      <div className=" mx-auto px-4 py-2 md:py-0">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex flex-shrink-0">
-            <a href="#" className=" text-xl font-bold md:m-4">
-              <img src={logo} alt={logo} className="h-full object-contain" />
+          <div className="flex items-center flex-shrink-0">
+            <a href="#" className="text-xl font-bold">
+              <img src={logo} alt="Logo" className="h-full object-contain" />
             </a>
-            <div className="hidden md:flex md:items-center md:space-x-8 md:ms-8">
+            <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-8 md:ml-4 lg:ml-8">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-black hover:underline transition-colors duration-200"
+                  className="text-black hover:underline transition-colors duration-200 text-sm lg:text-base"
                 >
                   {item.name}
                 </a>
@@ -35,13 +35,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          <div className="hidden md:flex md:items-center md:space-x-2 lg:space-x-4">
             <a
               href="#"
-              className="text-black py-2 px-3 hover:text-white hover:bg-black transition-colors duration-200"
+              className="text-black py-2 px-3 hover:text-white hover:bg-black transition-colors duration-200 text-sm lg:text-base"
               style={{
                 fontWeight: "600",
                 border: "1px solid rgba(223, 225, 230, 1)",
@@ -52,7 +50,7 @@ export default function Navbar() {
             </a>
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-full bg-black px-3 py-2 text-sm text-white hover:text-black hover:bg-white transition-colors duration-200"
+              className="inline-flex items-center justify-center rounded-full bg-black px-3 py-2 text-sm lg:text-base text-white hover:text-black hover:bg-white transition-colors duration-200"
               style={{
                 fontWeight: "600",
                 border: "1px solid rgba(223, 225, 230, 1)",
@@ -67,7 +65,7 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               type="button"
-              className="text-black me-5 hover:text-white"
+              className="text-black me-3 hover:text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
