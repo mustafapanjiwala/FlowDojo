@@ -1,15 +1,15 @@
-import { Clock, ChevronRight, Crosshair } from "lucide-react";
-import mailchimp from "../../assets/mailchimp.png";
-import medium from "../../assets/medium.png";
-import microsoft from "../../assets/microsoft.png";
-import upwork from "../../assets/upwork.png";
+import { Crosshair } from "lucide-react";
 import bg from "../../assets/gradientBG.png";
-import statImage1 from "../../assets/statImage1.png";
-import statImage2 from "../../assets/statImage2.png";
-import statImage3 from "../../assets/statImage3.png";
 import icon1 from "../../assets/icon1.png";
 import icon2 from "../../assets/icon2.png";
 import icon3 from "../../assets/icon3.png";
+import mailchimp from "../../assets/mailchimp.png";
+import medium from "../../assets/medium.png";
+import microsoft from "../../assets/microsoft.png";
+import statImage1 from "../../assets/statImage1.png";
+import statImage2 from "../../assets/statImage2.png";
+import statImage3 from "../../assets/statImage3.png";
+import upwork from "../../assets/upwork.png";
 
 export default function Hero() {
   return (
@@ -24,10 +24,7 @@ export default function Hero() {
     >
       <div className="container p-5 mt-5 md:m-auto">
         {/* Top Badge */}
-        <div
-          className="inline-flex items-center bg-white/10 px-4 py-1.5 text-sm font-medium text-white mb-4"
-          style={{ borderRadius: "12px" }}
-        >
+        <div className="inline-flex items-center rounded-xl bg-white/10 px-4 py-1.5 text-sm font-medium text-white mb-4">
           <Crosshair className="mr-2 h-4 w-4" />
           Goals & Reporting
         </div>
@@ -35,10 +32,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-2 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <h1
-              className="text-5xl lg:text-6xl leading-tight"
-              style={{ fontWeight: "600" }}
-            >
+            <h1 className="text-5xl font-semibold lg:text-6xl leading-tight">
               Goals and Reporting
               <span className="block">In One Place</span>
             </h1>
@@ -47,20 +41,10 @@ export default function Hero() {
               progress with real-time data
             </p>
             <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4">
-              <button
-                className="w-full sm:w-auto px-6 py-3 bg-white text-black font-medium hover:bg-gray-100 transition-colors"
-                style={{
-                  borderRadius: "12px",
-                }}
-              >
+              <button className="w-full sm:w-auto px-6 py-3 bg-white rounded-xl text-black font-medium hover:bg-gray-100 transition-colors">
                 Get Started
               </button>
-              <button
-                className="w-full sm:w-auto px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-colors"
-                style={{
-                  borderRadius: "12px",
-                }}
-              >
+              <button className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white/10 text-white font-medium hover:bg-white/20 transition-colors">
                 How it Works
               </button>
             </div>

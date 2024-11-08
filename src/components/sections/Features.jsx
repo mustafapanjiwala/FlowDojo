@@ -1,47 +1,8 @@
-import {
-  Archive,
-  Codepen,
-  Crosshair,
-  GitPullRequestIcon,
-  Trello,
-} from "lucide-react";
-import f1 from "../../assets/f1.png";
-import f2 from "../../assets/f2.png";
-import f3 from "../../assets/f3.png";
-import f4 from "../../assets/f4.png";
+import { Codepen } from "lucide-react";
+
+import { features } from "../data/data";
 
 export default function Features() {
-  const features = [
-    {
-      title: "Project Management",
-      description:
-        "Manage your projects from start to finish. With all of your projects in Ganttify, you'll always know who's doing what, by when",
-      icon: Trello,
-      image: f1,
-    },
-    {
-      title: "Workflows and Automations",
-      description:
-        "Create more efficient processes so you can seamlessly manage projects across departments and get more done in less time",
-      icon: GitPullRequestIcon,
-      image: f2,
-    },
-    {
-      title: "Goals and Reporting",
-      description:
-        "See how each project and portfolio ladders up to company objectives and keep everyone focused on the work that matters",
-      icon: Crosshair,
-      image: f3,
-    },
-    {
-      title: "Resource Management",
-      description:
-        "Get the visibility you need to plan accurate timelines, adjust workloads, and stay on track to achieve your objectives",
-      icon: Archive,
-      image: f4,
-    },
-  ];
-
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="px-4 md:mx-[5%] lg:mx-[5%]">

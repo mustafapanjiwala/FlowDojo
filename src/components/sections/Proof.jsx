@@ -1,18 +1,6 @@
-import mailchimp from "../../assets/mailchimp_2.png";
-import medium from "../../assets/medium_2.png";
-import microsoft from "../../assets/microsoft_2.png";
-import evernote from "../../assets/evernote.png";
-import dropbox from "../../assets/dropbox.png";
+import { companies } from "../data/data.js";
 
 export default function Proof() {
-  const companies = [
-    { name: "Medium", logo: medium },
-    { name: "Mailchimp", logo: mailchimp },
-    { name: "Evernote", logo: evernote },
-    { name: "Dropbox", logo: dropbox },
-    { name: "Microsoft", logo: microsoft },
-  ];
-
   return (
     <section className="py-16 bg-white">
       {/* <div className="container mx-auto px-4"> */}

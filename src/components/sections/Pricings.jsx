@@ -1,56 +1,10 @@
-"use client";
-
 import { useState } from "react";
 import { Check, CircleCheck, CreditCard } from "lucide-react";
 import bg from "../../assets/gradientBG_rotated.png";
+import { plans } from "../data/data.js";
 
 export default function Pricing() {
   const [billingType, setBillingType] = useState("monthly");
-
-  const plans = [
-    {
-      name: "Personal",
-      price: billingType === "monthly" ? 29 : 290,
-      description:
-        "For individuals and small teams looking to manage their tasks",
-      features: [
-        "Unlimited contacts",
-        "Bulk emailing",
-        "AI Integration",
-        "View & share up to 3 years",
-        "Collaboration & permissions",
-      ],
-      highlighted: false,
-    },
-    {
-      name: "Pro",
-      price: billingType === "monthly" ? 39 : 390,
-      description:
-        "For growing teams that need to track their projects' progress and hit deadlines",
-      features: [
-        "Email sequences",
-        "Send emails from multiple domains",
-        "Connect multiple email accounts",
-        "Fully adjustable sharing permissions",
-        "Migration services",
-      ],
-      highlighted: true,
-    },
-    {
-      name: "Beyond limits",
-      price: "Custom Plan",
-      description:
-        "For companies that need to manage a portfolio of work and goals across departments",
-      features: [
-        "White glove onboarding",
-        "Custom billing",
-        "Dedicated slack channel",
-        "Dedicated point of contact",
-        "Unlimited reporting",
-      ],
-      highlighted: false,
-    },
-  ];
 
   return (
     <section
@@ -130,10 +84,13 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
                 <div className="mb-4">
-                  {typeof plan.price === "number" ? (
+                  {plan.type === "number" ? (
                     <div className="flex items-baseline">
                       <span className="text-5xl" style={{ fontWeight: "600" }}>
-                        ${plan.price}
+                        $
+                        {billingType == "monthly"
+                          ? plan.price_monthly
+                          : plan.price_yearly}
                       </span>
                       <span
                         className="ml-2 text-lg opacity-70"
@@ -144,7 +101,7 @@ export default function Pricing() {
                     </div>
                   ) : (
                     <div className="text-5xl" style={{ fontWeight: "600" }}>
-                      {plan.price}
+                      Custom Plan
                     </div>
                   )}
                 </div>

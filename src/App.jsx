@@ -23,7 +23,6 @@ function App() {
       <Customers />
       <Contact />
       <Footer />
-      {/* Other sections will go here */}
     </main>
   );
 }

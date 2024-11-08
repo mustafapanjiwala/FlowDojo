@@ -1,17 +1,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/Logo.png";
+import { navigation } from "../data/data.js";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Solutions", href: "#" },
-    { name: "Resources", href: "#" },
-    { name: "Company", href: "#" },
-    { name: "Pricing", href: "#" },
-  ];
 
   return (
     <nav className="top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm border-b border-white/10">

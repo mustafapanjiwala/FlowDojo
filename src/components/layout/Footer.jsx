@@ -1,64 +1,9 @@
 import { Box, Facebook, Instagram, Twitter, ChevronDown } from "lucide-react";
 import logo from "../../assets/footer_logo.png";
 import us from "../../assets/us.png";
+import { footerLinks } from "../data/data.js";
 
 export default function Footer() {
-  const footerLinks = {
-    ganttify: {
-      title: "Ganttify",
-      links: [
-        { name: "Home", href: "#" },
-        { name: "Product", href: "#" },
-        { name: "Pricing", href: "#" },
-        { name: "Customer Success", href: "#" },
-        { name: "Templates", href: "#" },
-        { name: "Trust & Security", href: "#" },
-      ],
-    },
-    solutions: {
-      title: "Solutions",
-      links: [
-        { name: "Project Management", href: "#" },
-        { name: "Goal Management", href: "#" },
-        { name: "Agile Management", href: "#" },
-        { name: "Task Management", href: "#" },
-        { name: "Productivity", href: "#" },
-        { name: "Work Management", href: "#" },
-        { name: "Project Planning", href: "#" },
-        { name: "To Do Lists", href: "#" },
-      ],
-    },
-    aboutUs: {
-      title: "About Us",
-      links: [
-        { name: "Company", href: "#" },
-        { name: "Leadership", href: "#" },
-        { name: "Customers", href: "#" },
-        { name: "Careers", href: "#" },
-        { name: "Changelog", href: "#" },
-      ],
-    },
-    resources: {
-      title: "Resources",
-      links: [
-        { name: "Help Center", href: "#" },
-        { name: "FAQ", href: "#" },
-        { name: "Developers & API", href: "#" },
-        { name: "Community", href: "#" },
-        { name: "Events", href: "#" },
-        { name: "Status", href: "#" },
-      ],
-    },
-    helpfulLinks: {
-      title: "Helpful Links",
-      links: [
-        { name: "Legal center", href: "#" },
-        { name: "Privacy policy", href: "#" },
-        { name: "Partnerships", href: "#" },
-      ],
-    },
-  };
-
   return (
     <footer className="bg-black text-white rounded-3xl md:rounded-none lg:rounded-none mt-4">
       <div className="container mx-auto px-5 md:px-10 py-12">
